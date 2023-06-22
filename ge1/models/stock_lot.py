@@ -19,3 +19,5 @@ class StockLot(models.Model):
         else:
             return super(StockLot, self)._get_next_serial(company, product)
         
+    
+        
