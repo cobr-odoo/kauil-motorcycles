@@ -19,6 +19,7 @@ class ProductTemplate(models.Model):
     top_speed = fields.Float()
     torque = fields.Float()
     year = fields.Integer()
+    name = fields.Char(default="", compute='set_motorcycle_name', inverse='_inverse_name')
     
     detailed_type = fields.Selection(selection_add=[('motorcycle','Motorcycle')], 
                             ondelete={'motorcycle': 'set product'},
@@ -32,3 +33,18 @@ class ProductTemplate(models.Model):
         type_mapping['motorcycle'] = 'product'
         return type_mapping
     
+    @api.depends('make', 'model', 'year')
+    def set_motorcycle_name(self):
+        # for motorcycle in self.filtered(lambda r: r.detailed_type == "motorcycle"):
+        #     motorcycle.name="hihi"
+        for motorcycle in self:
+            if motorcycle.detailed_type == 'motorcycle':
+                if motorcycle.make and motorcycle.model and motorcycle.year:
+                    motorcycle.name = str(motorcycle.make) + str(motorcycle.model) + str(motorcycle.year)
+                else:
+                    motorcycle.name = None
+    
+    def _inverse_name(self):
+        for motorcycle in self:
+            if motorcycle.detailed_type != 'motorcycle':
+                pass
