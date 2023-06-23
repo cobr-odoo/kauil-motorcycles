@@ -1,5 +1,6 @@
 from odoo import api, fields, models
 
+
 class StockLot(models.Model):
     _inherit = 'stock.lot'
 
@@ -18,6 +19,4 @@ class StockLot(models.Model):
 
         else:
             return super(StockLot, self)._get_next_serial(company, product)
-        
-    
-        
+
