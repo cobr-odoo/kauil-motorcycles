@@ -7,7 +7,7 @@ class StockLot(models.Model):
 
     def _get_next_serial(self, company, product):
 
-
+    
         prod_tmpl_id = product.product_tmpl_id
         if prod_tmpl_id.detailed_type == 'motorcycle' and product.tracking != 'none':
 
