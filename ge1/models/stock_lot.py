@@ -14,7 +14,7 @@ class StockLot(models.Model):
             prod_make = prod_tmpl_id.make if prod_tmpl_id.make else 'XX'
             prod_model = prod_tmpl_id.model if prod_tmpl_id.model else 'XX'
             prod_year = str(prod_tmpl_id.year)[-2:] if prod_tmpl_id.year else '00'
-            sequence = self.env['ir.sequence'].next_by_code('stock.lot.serial')
+            sequence = self.env['ir.sequence'].next_by_code('serial.number')
             return f'{prod_make}{prod_model}{prod_year}{sequence}'
 
         else:

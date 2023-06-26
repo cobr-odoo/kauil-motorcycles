@@ -15,6 +15,7 @@
     "depends": ["motorcycle_registry"],
     
     "data": [
+        'data/serial_data.xml',
     ],
     
     "demo": [
