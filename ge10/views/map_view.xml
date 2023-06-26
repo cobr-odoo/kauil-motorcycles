@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Adding map view to project-->
+    <record id="motorcycle_registry_view_map_inherit_motorcycle_registry" model="ir.ui.view">
+        <field name="name">motorcycle.registry.view.map.inherit.motorcycle.registry</field>
+        <field name="model">motorcycle.registry</field>  
+        <field name="arch" type="xml">
+            <map res_partner="owner_id"></map>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="registry_list_action">
+            <field name="name">Registry</field>
+            <field name="res_model">motorcycle.registry</field>
+            <field name="view_mode">map</field>
+           
+        </record>
+      
+    </data>
+</odoo> 
