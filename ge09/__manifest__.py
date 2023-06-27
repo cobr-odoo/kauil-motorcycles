@@ -12,10 +12,10 @@
     
     "license": "OPL-1",
     
-    "depends": [],
+    "depends": ['sale'],
     
     "data": [
-     
+        'views/sale_order_form_inherit.xml'
     ],
     
     "demo": [
