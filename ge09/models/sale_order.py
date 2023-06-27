@@ -17,6 +17,9 @@ class SaleOrder(models.Model):
                 if order.order_line.product_id.detailed_type == 'motorcycle':
                     sale_order.new_customer = False
                     break
+
+    def add_discount(self):
+        pass
     #     for record in self:
             
     #         record.new_customer = True
