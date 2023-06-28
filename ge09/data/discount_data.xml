@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate=1>
+    <record id="pricelist_item1" model="product.pricelist.item">
+        <field name="base">list_price</field>
+        <field name="applied_on">1_product</field>
+        <field name="pricelist_id" ref="product.list0"/>
+        <field name="product_tmpl_id" ref="product.product_product_4_product_template"/>
+        <field name="price_discount">25000</field>
+        <field name="min_quantity">1</field>
+        <field name="compute_price">fixed</field>Saleable
+    </record>
+    <!-- Price list -->
+    <record id="1000000" model="product.pricelist">
+        <field name="name">New Customer</field>
+        <field name="item_ids" ref="pricelist_item1"/>
+        <field name="sequence">3</field>
+        <field name="discount_policy">without_discount</field>
+        <field name="currency_id" ref="base.USD"/>
+
+    </record>
+    </data>
+</odoo>

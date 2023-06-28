@@ -16,9 +16,11 @@
     
     "data": [
         'views/sale_order_form_inherit.xml'
+
     ],
     
     "demo": [
+        "data/discount_data.xml",
     ],
     
     "author": "kauil-motors",
