@@ -13,10 +13,10 @@
     
     "license": "OPL-1",
     
-    "depends": [],
+    "depends": ['motorcycle_registry', 'repair'],
     
     "data": [
-       
+       'views/repair_form_inherit.xml'
     ],
     
     "demo": [
@@ -27,6 +27,6 @@
     
     "website": "www.odoo.com",
     
-    "application": False,
+    "application": True,
     
 }
