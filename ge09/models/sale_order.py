@@ -19,11 +19,12 @@ class SaleOrder(models.Model):
                     break
 
     def add_discount(self):
-        pass
-    #     for record in self:
-            
-    #         record.new_customer = True
-
+        for sale_order in self:
+            discount_percent = 20
+            sale_order_line = sale_order.order_line
+            total = sale_order_line.price_unit
+            discounted_price = total * (1 - (discount_percent / 100))
+            sale_order_line.price_unit = discounted_price
                 
 
                 
